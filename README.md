@@ -157,6 +157,7 @@ Key Takeaways from the Ablation Study
 ## upload your simulation results to YouTube and provide the link in your README.md
 output_ficus_baseline: https://youtube.com/shorts/bctmOqA5WME
 output_plane_baseline: https://youtube.com/shorts/HXdU5ho5vlA
+調整參數: https://youtu.be/_9bVbc80LvU
 
 
 ## short answer for BONUS part

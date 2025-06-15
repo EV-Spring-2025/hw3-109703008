@@ -37,16 +37,24 @@ Please complete Part 1–2 as described in the [Google Slides](https://docs.goog
 
 ## Describe the adjustments you made to the physical parameters
 For ficus (material: "jelly"), I use 
+
 N_GRID_VALUES = [50, 25]
+
 SUBSTEP_DT_VALUES = [1e-4, 5e-5]
+
 GRID_V_DAMPING_SCALE_VALUES = [0.9999, 0.8]
+
 SOFTENING_VALUES = [0.1, 0.5]
 
 
 For plane (material: "metal"), I use
+
 N_GRID_VALUES = [50, 25, 5]
+
 SUBSTEP_DT_VALUES = [1e-3, 1e-4, 5e-5]
+
 GRID_V_DAMPING_SCALE_VALUES = [0.9999, 0.8]
+
 SOFTENING_VALUES = [0.1, 0.5, 0.9]
 
 ## Record the PSNR and simulation videos for each parameter variation
@@ -135,9 +143,13 @@ SOFTENING_VALUES = [0.1, 0.5, 0.9]
 
 ## Share your key takeaways, findings encountered during the ablation study
 我發現當n_grid越大時，在plane中一些末端小部分來說會扭動的更加細緻，當n_grid很小時，整個螺旋槳就不扭動了，而且變得很奇怪
+
 我發現當substep_dt越大時，plane中一些扇葉末端小部分來說會扭動幅度更大更軟，substep_dt越小時，plane中一些末端小部分來說會扭動幅度更小更硬
+
 我發現當grid_v_damping_scale越大時，在ficus場景樹枝抖動大，plane場景物體擺動角度大，grid_v_damping_scale越小時，ficus場景樹枝不抖，plane場景物體擺動角度小
+
 我發現soften參數調整似乎沒有什麼變化
+
 Key Takeaways from the Ablation Study
 	1.	Grid resolution (n_grid) 主導整體細節與 PSNR
 	•	在 Plane 場景，把 n_grid 從 5 → 25 → 50，平均 PSNR 依序提升 ≈ 3 dB → +1 dB（19.4 → 22.5 → 23.5）。對應影片中可見螺旋槳葉緣的彎折從「整塊剛體」變成連續扭轉，末端振幅也更平滑。
@@ -156,7 +168,9 @@ Key Takeaways from the Ablation Study
 	•	Plane：n_grid=50, substep_dt=1e-3, grid_v=1, softening=0.1 → 25.17 dB 且視覺最接近真實彈性扇葉。
 ## upload your simulation results to YouTube and provide the link in your README.md
 output_ficus_baseline: https://youtube.com/shorts/bctmOqA5WME
+
 output_plane_baseline: https://youtube.com/shorts/HXdU5ho5vlA
+
 調整參數: https://youtu.be/_9bVbc80LvU
 
 
